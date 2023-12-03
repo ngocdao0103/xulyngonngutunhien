@@ -54,7 +54,6 @@ function getLateNew() {
     let htmtLateNew = '';
     let listLateNew = getListData();
     listLateNew.length = 12;
-    console.log(listLateNew);
     listLateNew.forEach(item => {
         htmtLateNew += `
         <div class="col-lg-4 col-xl-3">
@@ -81,22 +80,7 @@ function getLateNew() {
 }
 getLateNew()
 
-var tabLinks = document.querySelectorAll(".tablinks");
-var tabContent =document.querySelectorAll(".tabcontent");
-tabLinks.forEach(function(el) {
-   el.addEventListener("click", openTabs);
-});
-
-
-function openTabs(el) {
-   var btn = el.currentTarget;
-   var electronic = btn.dataset.electronic;
-   tabContent.forEach(function(el) {
-      el.classList.remove("active");
-   });
-   tabLinks.forEach(function(el) {
-      el.classList.remove("active");
-   });
-   document.querySelector("#" + electronic).classList.add("active");
-   btn.classList.add("active");
+function searchResult() {
+    var textSearch = document.getElementById("textSearch").value;
+    window.location.href ="./detail-page.html?text=" + textSearch;
 }
