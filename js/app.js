@@ -36,7 +36,7 @@ function getSubject() {
                 <div class="col-8">
                     <div class="features-content d-flex flex-column">
                         <p class="text-uppercase mb-2">${item.subject}</p>
-                        <a href="/detail-page.html?id=${item.Column1}" class="h6">
+                        <a href="/detail-page.html?id=${item.file_names}" class="h6">
                             ${item.title}
                         </a>
                         <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> ${item.author}</small>
@@ -66,7 +66,7 @@ function getLateNew() {
                     </div>
                     <div class="col-12">
                         <div class="d-flex flex-column">
-                            <a href="/detail-page.html?id=${item.Column1}" class="h5 mb-2" style="text-align: justify;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">${item.title}</a>
+                            <a href="/detail-page.html?id=${item.file_names}" class="h5 mb-2" style="text-align: justify;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">${item.title}</a>
                             <p class="fs-5 mb-0"><i class="fa fa-pen"> ${item.subject}</i> </p>
                             <p class="fs-5 mb-0"><i class="fa fa-user"> ${item.author}</i></p>
                         </div>

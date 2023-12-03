@@ -16,7 +16,7 @@ function getListId() {
     news.forEach(item => {
         if (id !== '') {
             document.getElementById("nnnnn").style.display="block";
-            if (item.Column1 === Number(id)) {
+            if (item.file_names === id) {
                 this.content = item.file_texts;
                 htmlNews = `
                     <div class="border-bottom py-3">
@@ -47,7 +47,7 @@ function getListSubject() {
     subject.forEach(item => {
         htmlsbj += `
         <div class="col-12">
-            <a href="/detail-page.html?id=${item.Column1}" class="link-hover btn btn-light w-100 rounded text-uppercase text-dark py-3">
+            <a href="/detail-page.html?id=${item.file_names}" class="link-hover btn btn-light w-100 rounded text-uppercase text-dark py-3">
                 ${item.subject}
             </a>
         </div>
@@ -63,23 +63,9 @@ async function getSimilarNews() {
     await axios({
         method: 'POST',
         url: 'http://xulyngonngutunhien.ddns.net:5080/search',
-        // proxyHeaders: false,
-        // credentials: false,
         data: {
             noidung: this.content
         },
-        // crossdomain: true,
-        // proxy: {
-        //     host: 'http://xulyngonngutunhien.ddns.net',
-        //     port: 5080
-        // },
-        // headers: {
-        //     "Cache-Control": "no-cache",
-        //     "Content-Type": "application/x-www-form-urlencoded",
-        //     'Access-Control-Allow-Origin': '*',
-        //     'Access-Control-Allow-Headers': '*',
-        //     'Access-Control-Allow-Credentials': 'true'
-        // }
     }).then(response => {
         listSimilarNews = response.data;
     })
@@ -99,7 +85,7 @@ async function getSimilarNews() {
                     </div>
                     <div class="col-12">
                         <div class="d-flex flex-column">
-                            <a href="/detail-page.html?id=${item.file_names.split('.')[0]}" class="h5 mb-2" style="text-align: justify;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">${item.title}</a>
+                            <a href="/detail-page.html?id=${item.file_names}" class="h5 mb-2" style="text-align: justify;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">${item.title}</a>
                             <p class="fs-5 mb-0"><i class="fa fa-pen"> ${item.subject}</i> </p>
                             <p class="fs-5 mb-0"><i class="fa fa-user"> ${item.author}</i></p>
                             <p class="fs-5 mb-0"><i class="fa fa-hand-point-right"> ${item.cosine_similarity}</i></p>
