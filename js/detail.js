@@ -47,7 +47,7 @@ function getListSubject() {
     subject.forEach(item => {
         htmlsbj += `
         <div class="col-12">
-            <a href="#" class="link-hover btn btn-light w-100 rounded text-uppercase text-dark py-3">
+            <a href="/detail-page.html?id=${item.Column1}" class="link-hover btn btn-light w-100 rounded text-uppercase text-dark py-3">
                 ${item.subject}
             </a>
         </div>
