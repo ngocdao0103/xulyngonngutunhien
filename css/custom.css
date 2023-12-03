@@ -1,0 +1,41 @@
+/* Tab Links */
+.tabs {
+    display: flex;
+    width: 60%;
+}
+
+.tablinks {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.tablinks:hover {
+    background: #1b7dff;
+    color: #fff;
+}
+
+/* Tab active */
+.tablinks.active {
+    background: #1b7dff;
+    color: #fff;
+}
+
+/* tab content */
+.tabcontent {
+    display: none;
+}
+
+/* Text*/
+.tabcontent p {
+    color: #333;
+    font-size: 16px;
+}
+
+/* tab content active */
+.tabcontent.active {
+    display: block;
+}
