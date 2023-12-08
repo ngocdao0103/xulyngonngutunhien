@@ -100,27 +100,6 @@
     </div>
     <!-- Navbar End -->
 
-
-    <!-- Modal Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tìm kiếm từ khóa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center">
-                    <div class="input-group w-75 mx-auto d-flex">
-                        <input type="search" class="form-control p-3" placeholder="Từ khóa"
-                            aria-describedby="search-icon-1">
-                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Search End -->
-
     <!-- Single Product Start -->
     <div class="container-fluid mt-5" id="nnnnn">
         <div class="container">
@@ -143,9 +122,15 @@
 
     <div class="container-fluid">
         <div class="container">
-            <div class="mt-5">
-                <h2 class="">Tin tương tự</h2>
-                <div class="row g-4" id="htmtSimilarNews"></div>
+            <div class="row mt-5" id="twoSuggestions">
+                <div class="border col-lg-6">
+                    <h2 class="mt-4">Tin tương tự</h2>
+                    <div class="row g-4" id="htmtSimilar"></div>
+                </div>
+                <div class="border col-lg-6">
+                    <h2 class="mt-4">Gợi ý từ khóa liên quan</h2>
+                    <div class="row g-4" id="htmtSimilarNewsRelate"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -326,7 +311,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/data.js"></script>
-    <script src="js/detail.js"></script>
+    <script src="js/detail-research.js"></script>
 </body>
 
 </html>

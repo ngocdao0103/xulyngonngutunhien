@@ -62,7 +62,7 @@ async function getSimilarNews() {
     let listSimilarNews = '';
     await axios({
         method: 'POST',
-        url: 'http://xulyngonngutunhien.ddns.net:5080/search',
+        url: 'http://xulyngonngutunhien.ddns.net:5070/search',
         data: {
             noidung: this.content
         },
@@ -98,6 +98,10 @@ async function getSimilarNews() {
     });
     document.getElementById('htmtSimilarNews').innerHTML = htmtSimilarNews;
 }
-
-
+function searchResult() {
+    var textSearch = document.getElementById("textSearch").value;
+    if(textSearch !== '') {
+        window.location.href ="./detail-page-research.html?text=" + textSearch;
+    }
+}
 

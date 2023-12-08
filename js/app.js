@@ -82,5 +82,11 @@ getLateNew()
 
 function searchResult() {
     var textSearch = document.getElementById("textSearch").value;
-    window.location.href ="./detail-page.html?text=" + textSearch;
+    var textSearch2 = document.getElementById("textSearch2").value;
+    if(textSearch !== '') {
+        window.location.href ="./detail-page-research.html?text=" + textSearch;
+    }
+    if(textSearch2 !== '') {
+        window.location.href ="./detail-page-research.html?text=" + textSearch2;
+    }
 }
