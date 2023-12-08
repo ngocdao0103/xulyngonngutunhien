@@ -54,13 +54,16 @@
                         </div>
 
                     </div>
-                    <div class="overflow-hidden" style="width: 735px;">
+                    <div class="overflow-hidden">
                         <div class="d-flex align-items-center">
                             <div class="input-group d-flex">
-                                <input type="search" class="form-control" placeholder="Nội dung tìm kiếm"
-                                    id="textSearch" aria-describedby="search-icon-1">
-                                <span id="search-icon-1" onclick="searchResult()" class="input-group-text p-3"><i
-                                        class="fa fa-search"></i></span>
+                                <select class="form-control w-25" name="" id="typeSearch2">
+                                    <option value="1">Mặc định</option>
+                                    <option value="2">Mở rộng</option>
+                                </select>
+                                <input type="search" style="width: 235px;" class="form-control" placeholder="Nội dung tìm kiếm" id="textSearch"
+                                    aria-describedby="search-icon-1">
+                                <span id="search-icon-1" onclick="searchResult2()" class="input-group-text p-3"><i class="fa fa-search"></i></span>
                             </div>
                         </div>
                     </div>
@@ -144,7 +147,8 @@
     <div class="container-fluid">
         <div class="container">
             <div class="mt-5">
-                <h2 class="">Tin tương tự</h2>
+                <h2 id="similar" style="display: none;">Tin tương tự</h2>
+                <h2 id="extend" style="display: none;">Tin mở rộng</h2>
                 <div class="row g-4" id="htmtSimilarNews"></div>
             </div>
         </div>

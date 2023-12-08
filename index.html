@@ -53,12 +53,16 @@
                         </div>
                         
                     </div>
-                    <div class="overflow-hidden" style="width: 735px;">
+                    <div class="overflow-hidden">
                         <div class="d-flex align-items-center">
                             <div class="input-group d-flex">
-                                <input type="search" class="form-control" placeholder="Nội dung tìm kiếm" id="textSearch"
+                                <select class="form-control w-25" name="" id="typeSearch2">
+                                    <option value="1">Mặc định</option>
+                                    <option value="2">Mở rộng</option>
+                                </select>
+                                <input type="search" style="width: 235px;" class="form-control" placeholder="Nội dung tìm kiếm" id="textSearch"
                                     aria-describedby="search-icon-1">
-                                <span id="search-icon-1" onclick="searchResult()" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                                <span id="search-icon-1" onclick="searchResult2()" class="input-group-text p-3"><i class="fa fa-search"></i></span>
                             </div>
                         </div>
                     </div>
@@ -122,10 +126,16 @@
                         unknown printer took a galley
                     </p>
                     <div class="position-relative mx-auto">
-                        <input class="form-control w-100 py-3 rounded-pill" id="textSearch2"
+                        <div class="form-group d-flex">
+                            <select class="form-control w-25" name="" id="typeSearch">
+                                <option value="1">Mặc định</option>
+                                <option value="2">Mở rộng</option>
+                            </select>
+                            <input class="form-control w-100 py-3" id="textSearch2"
                             placeholder="Nhập nội dung tìm kiếm">
+                        </div>
                         <button onclick="searchResult()" type="submit"
-                            class="btn btn-primary py-3 px-5 position-absolute rounded-pill text-white h-100"
+                            class="btn btn-primary py-3 px-5 position-absolute text-white h-100"
                             style="top: 0; right: 0;">Tìm kiếm</button>
                     </div>
                 </div>
